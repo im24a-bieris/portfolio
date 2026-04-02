@@ -34,7 +34,7 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", sans-serif;
+  font-family: "Space Grotesk", "Segoe UI", "Helvetica Neue", sans-serif;
   background: radial-gradient(circle at top right, #eef2f8 0%, var(--gray-50) 42%, #f6f8fb 100%);
   color: var(--gray-600);
   line-height: 1.6;
@@ -158,7 +158,7 @@ nav a:hover {
 .button-primary:hover {
   background: var(--primary-dark);
   transform: translateY(-1px);
-  box-shadow: 0 8px 18px rgba(95, 115, 150, 0.24);
+  box-shadow: 0 8px 18px rgba(43, 62, 94, 0.372);
 }
 
 .button-secondary {
@@ -273,9 +273,50 @@ nav a:hover {
   border: 1px solid rgba(95, 115, 150, 0.2);
 }
 
+/* ABOUT */
+.about-intro {
+  max-width: 760px;
+}
+
+.about-intro p {
+  margin-top: 14px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.skill-list {
+  margin-top: 14px;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.skill-list li {
+  font-size: 15px;
+  color: var(--gray-700);
+  padding-left: 14px;
+  position: relative;
+}
+
+.skill-list li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--primary);
+  position: absolute;
+  left: 0;
+  top: 9px;
+}
+
 /* CARDS */
 .card {
-  background: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 112, 0.82);
   border: 1px solid rgba(43, 53, 72, 0.1);
   border-radius: 14px;
   padding: 30px;
@@ -306,6 +347,38 @@ nav a:hover {
   font-size: 12px;
   font-weight: 600;
   margin-bottom: 12px;
+}
+
+/* CONTACT */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.contact-cards {
+  display: grid;
+  gap: 14px;
+}
+
+.contact-card {
+  padding: 20px;
+}
+
+.contact-card p {
+  margin-bottom: 0;
+}
+
+.contact-form {
+  display: grid;
+  gap: 16px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
 }
 
 /* FORMS */
@@ -346,7 +419,7 @@ img {
 
 /* FOOTER */
 footer {
-  background: #1a2030;
+  background: #1e2a49;
   color: var(--gray-400);
   padding: 80px 0 32px;
 }
@@ -401,6 +474,16 @@ footer .footer-bottom {
   gap: 24px;
 }
 
+@media (max-width: 980px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 768px) {
   h1 {
     font-size: 38px;
@@ -430,4 +513,3 @@ footer .footer-bottom {
     padding: 24px;
   }
 }
-
