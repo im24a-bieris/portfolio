@@ -28,17 +28,17 @@ export default function Home() {
     {
       id: 1,
       title: "SmashAmMeerkat",
-      description: "Ähnlich wie Whac-A-Mole nur das man die richtigen Erdmännchen abschlieest",
+      description: "Ähnlich wie Whac-A-Mole, nur dass man die richtigen Erdmännchen abschießt.",
+      status: "Spielidee",
       stack: ["Java", "CSS", "Vercel"],
     },
     {
       id: 2,
       title: "Turnverein-VideoWebsite",
-      description: "Eine Website, wo Trainer Turn-Videos mit Beschreibungen und Tipps hochladen können, damit die Turner, ohne Trainer neue Teile zu lernen",
+      description: "Eine Website, auf der Trainer Turn-Videos mit Beschreibungen und Tipps hochladen können, damit Turner auch selbstständig neue Teile lernen.",
       stack: ["JS", "REST API", "Charting"],
-      status: "UI System",
+      status: "Webkonzept",
     },
-    
   ];
 
   const notes = [
@@ -123,15 +123,6 @@ export default function Home() {
                 </div>
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
-                {project.link?.startsWith("/") ? (
-                  <Link className="button-text" href={project.link}>
-                    {project.cta}
-                  </Link>
-                ) : project.link ? (
-                  <a className="button-text" href={project.link}>
-                    {project.cta}
-                  </a>
-                ) : null}
               </div>
             ))}
           </div>
