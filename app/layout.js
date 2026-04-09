@@ -24,27 +24,13 @@ export default function RootLayout({ children }) {
         {children}
 
         <footer>
-          <div className="container">
-            <div>
-              <h4>Navigation</h4>
-              <Link href="/">Home</Link>
-              <Link href="/about">Über mich</Link>
-              <Link href="/contact">Kontakt</Link>
-            </div>
-            <div>
-              <h4>Links</h4>
+          <div className="container footer-simple">
+            <p>&copy; 2026 Samuel</p>
+            <div className="footer-inline-links">
               <a href="https://github.com/im24a-bieris" target="_blank" rel="noreferrer">GitHub</a>
               <a href="https://www.instagram.com/samuel_b_zh" target="_blank" rel="noreferrer">Instagram</a>
+              <a href="mailto:samuelbieri343@gmail.com">E-Mail</a>
             </div>
-            <div>
-              <h4>Kontakt</h4>
-              <a href="mailto:samuelbieri343@gmail.com">samuelbieri343@gmail.com</a>
-              <a href="tel:+41775060634">+41 77 506 06 34</a>
-              <p style={{ marginTop: "8px", fontSize: "14px" }}>Zürich, Schweiz</p>
-            </div>
-          </div>
-          <div className="container footer-bottom">
-            <p>&copy; 2026 Samuel. All rights reserved.</p>
           </div>
         </footer>
       </body>

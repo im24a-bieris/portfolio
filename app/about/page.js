@@ -1,69 +1,76 @@
-﻿const skills = [
-  {
-    id: 1,
-    title: "Frontend",
-    items: ["React", "Next.js", "HTML5", "CSS3", "JavaScript"],
-  },
-  {
-    id: 2,
-    title: "Design",
-    items: ["UI/UX", "Responsive Design", "Wireframing", "Design Systems"],
-  },
-  {
-    id: 3,
-    title: "Tools",
-    items: ["Git", "VS Code", "Node.js", "Figma", "Vercel"],
-  },
-];
-
-const profileNotes = [
-  {
-    id: 1,
-    title: "Mein Fokus",
-    text: "Websites, die ruhig, modern und vertrauenswürdig wirken und auf Mobile genauso sauber funktionieren wie auf Desktop.",
-  },
-  {
-    id: 2,
-    title: "So denke ich",
-    text: "Design und Code gehören für mich zusammen. Eine gute Seite soll nicht nur schön aussehen, sondern sich klar und logisch anfühlen.",
-  },
-  {
+﻿export default function About() {
+  const strengths = [
+    {
+      id: 1,
+      icon: "FE",
+      title: "Frontend",
+      text: "React, Next.js und moderne UI-Umsetzung mit Fokus auf Lesbarkeit und Struktur.",
+    },
+    {
+      id: 2,
+      icon: "UI",
+      title: "UI Design",
+      text: "Gespür für Typografie, Abstände, visuelle Hierarchie und eine ruhige Gestaltung.",
+    },
+    {
       id: 3,
-      title: "Platzhalter für Story",
-      text: "Hier kannst du später kurz erzählen, wie du zur Webentwicklung gekommen bist oder was dich an Gestaltung reizt.",
-  },
-];
+      icon: "UX",
+      title: "Nutzerführung",
+      text: "Inhalte und Funktionen so aufbauen, dass Orientierung und Verständlichkeit im Vordergrund stehen.",
+    },
+    {
+      id: 4,
+      icon: "DEV",
+      title: "Technische Basis",
+      text: "Sauber strukturierter Code, wartbare Komponenten und ein solides Fundament für Erweiterungen.",
+    },
+  ];
 
-export default function About() {
+  const focusAreas = [
+    {
+      id: 1,
+      title: "Responsive Interfaces",
+      text: "Layouts, die auf unterschiedlichen Geräten konsistent, ruhig und präzise funktionieren.",
+    },
+    {
+      id: 2,
+      title: "Design und Entwicklung zusammen denken",
+      text: "Ich arbeite gerne an Oberflächen, bei denen Gestaltung und technische Umsetzung eng zusammenspielen.",
+    },
+    {
+      id: 3,
+      title: "Klare digitale Auftritte",
+      text: "Mich interessieren Websites und Oberflächen, die Vertrauen schaffen und nicht überladen wirken.",
+    },
+  ];
+
   return (
     <main>
       <section className="section" style={{ paddingTop: "64px" }}>
-        <div className="container">
+        <div className="container about-hero">
           <div className="about-intro hero-panel">
             <small className="hero-kicker">Über mich</small>
-            <h1>Ich entwickle klare digitale Auftritte mit Sinn für Struktur.</h1>
+            <h1>Ich entwickle digitale Oberflächen mit einem klaren Blick für Struktur und Gestaltung.</h1>
             <p>
-              Ich bin Samuel, Frontend-Entwickler mit Fokus auf moderne Websites, die schnell laden, klar strukturiert sind
-              und auf jedem Gerät sauber funktionieren.
+              Ich bin Samuel und interessiere mich besonders für Frontend-Entwicklung, moderne Websites und die Frage,
+              wie man Inhalte digital ruhig, klar und verständlich präsentiert.
             </p>
             <p>
-              Mein Schwerpunkt liegt auf der Verbindung von Design und Technik: gute Nutzerführung, wartbarer Code und
-              ein Ergebnis, das nicht nur gut aussieht, sondern auch langfristig nachvollziehbar bleibt.
+              Dabei reizt mich vor allem die Verbindung von Technik und Design: Eine gute Oberfläche soll nicht nur
+              funktionieren, sondern sich auch stimmig, hochwertig und bewusst gestaltet anfühlen.
             </p>
           </div>
-        </div>
-      </section>
 
-      <section className="section">
-        <div className="container">
-          <div className="note-grid">
-            {profileNotes.map((note) => (
-              <article key={note.id} className="card">
-                <h3>{note.title}</h3>
-                <p>{note.text}</p>
-              </article>
-            ))}
-          </div>
+          <aside className="profile-visual">
+            <div className="profile-portrait">
+              <span>SB</span>
+            </div>
+            <div className="profile-meta">
+              <h3>Samuel Bieri</h3>
+              <p>Zürich, Schweiz</p>
+              <p>Frontend, UI und digitale Gestaltung</p>
+            </div>
+          </aside>
         </div>
       </section>
 
@@ -71,18 +78,15 @@ export default function About() {
         <div className="container">
           <div className="section-heading">
             <h2>Fähigkeiten</h2>
-            <p>Tools und Technologien, mit denen ich täglich arbeite.</p>
+            <p>Die Themen, in denen ich meine Stärken besonders sehe.</p>
           </div>
 
-          <div className="skills-grid">
-            {skills.map((skill) => (
-              <article key={skill.id} className="card">
-                <h3>{skill.title}</h3>
-                <ul className="skill-list">
-                  {skill.items.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
+          <div className="icon-grid">
+            {strengths.map((strength) => (
+              <article key={strength.id} className="icon-card">
+                <div className="icon-badge">{strength.icon}</div>
+                <h3>{strength.title}</h3>
+                <p>{strength.text}</p>
               </article>
             ))}
           </div>
@@ -92,26 +96,17 @@ export default function About() {
       <section className="section">
         <div className="container">
           <div className="section-heading">
-            <h2>So arbeite ich</h2>
-            <p>Klare Abläufe für eine ruhige und nachvollziehbare Arbeitsweise.</p>
+            <h2>Das sind meine Schwerpunkte</h2>
+            <p>Bereiche, auf die ich mich in meiner Arbeit besonders konzentriere.</p>
           </div>
 
           <div className="project-grid">
-            <div className="card">
-              <span className="card-badge">01 Analyse</span>
-              <h3>Ziele verstehen</h3>
-              <p>Wir definieren gemeinsam Anforderungen, Zielgruppe und Prioritäten.</p>
-            </div>
-            <div className="card">
-              <span className="card-badge">02 Umsetzung</span>
-              <h3>Sauber entwickeln</h3>
-              <p>Ich baue eine performante Lösung mit wartbarer Struktur und klarem Design.</p>
-            </div>
-            <div className="card">
-              <span className="card-badge">03 Launch</span>
-              <h3>Live stellen</h3>
-              <p>Deployment, letzte Tests und Übergabe mit Fokus auf Stabilität und Nachvollziehbarkeit.</p>
-            </div>
+            {focusAreas.map((area) => (
+              <article key={area.id} className="card">
+                <h3>{area.title}</h3>
+                <p>{area.text}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
