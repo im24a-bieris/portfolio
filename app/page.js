@@ -1,58 +1,61 @@
 ﻿import Link from "next/link";
 
 export default function Home() {
-  const strengths = [
+  const stats = [
+    { id: 2, label: "Jahre Erfahrung", value: "2+" },
+    { id: 3, label: "Antwortzeit", value: "< 24h" },
+  ];
+
+  const services = [
     {
       id: 1,
-      title: "Klares Frontend",
-      description: "Ich baue Oberflächen, die ruhig, strukturiert und auf Desktop wie Mobile konsistent wirken.",
+      title: "Websites mit klarer Struktur",
+      description: "Ich plane und baue Seiten, die ruhig wirken, schnell laden und Inhalte sauber auf den Punkt bringen.",
     },
     {
       id: 2,
-      title: "Saubere Umsetzung",
-      description: "Mir sind verständlicher Code, nachvollziehbare Komponenten und eine solide technische Basis wichtig.",
+      title: "Redesigns mit mehr Fokus",
+      description: "Bestehende Seiten überarbeite ich so, dass Navigation, Lesefluss und visuelle Hierarchie besser funktionieren.",
     },
     {
       id: 3,
-      title: "Design mit System",
-      description: "Ich achte auf Typografie, Abstände, Hierarchie und einen visuellen Stil, der nicht beliebig wirkt.",
+      title: "Saubere Frontend-Umsetzung",
+      description: "Responsive Layouts, wartbare Komponenten und ein solides Fundament für spätere Erweiterungen.",
     },
   ];
 
-  const works = [
+  const projects = [
     {
       id: 1,
-      title: "SmashAmMeerkat",
-      description: "Ein kleines Spielkonzept mit klarer Interaktion, schnellem Feedback und einfacher visueller Sprache.",
-      stack: ["Java", "Game Logic", "UI"],
-      preview: "Spieloberfläche",
-      source: "https://github.com/im24a-bieris",
+      title: "SmashAMeerkat",
+      description: "Ähnlich wie Whac-A-Mole, nur dass man die richtigen Erdmännchen abschießt.",
+      status: "Spielidee",
+      stack: ["Java", "CSS", "Vercel"],
     },
     {
       id: 2,
-      title: "Turnverein Video-Plattform",
-      description: "Eine Plattform-Idee für Trainingsvideos mit Beschreibungen, Tipps und besserem Zugang zu Lerninhalten.",
-      stack: ["JavaScript", "Konzept", "Frontend"],
-      preview: "Video-Plattform",
-      source: "https://github.com/im24a-bieris",
+      title: "Turnverein-VideoWebsite",
+      description: "Eine Website, auf der Trainer Turn-Videos mit Beschreibungen und Tipps hochladen können, damit Turner auch selbstständig neue Teile lernen.",
+      stack: ["JS", "REST API", "Charting"],
+      status: "Webkonzept",
     },
   ];
 
-  const profileNotes = [
+  const notes = [
     {
       id: 1,
-      title: "Wie ich arbeite",
-      text: "Ich mag klare Strukturen, nachvollziehbare Entscheidungen und digitale Lösungen, die langfristig gepflegt werden können.",
+      title: "Derzeit offen für",
+      text: "Neue Inhalte, frische Ideen und visuelle Weiterentwicklungen.",
     },
     {
       id: 2,
-      title: "Was mich interessiert",
-      text: "Besonders spannend finde ich Frontend-Themen, UI-Gestaltung und die Verbindung von Technik und visueller Qualität.",
+      title: "Arbeitsweise",
+      text: "Direkt, strukturiert und mit Fokus auf ein Ergebnis, das später leicht gepflegt werden kann.",
     },
     {
       id: 3,
-      title: "Was Sie hier sehen",
-      text: "Diese Seite zeigt ausgewählte Arbeiten, meine Schwerpunkte und einen Eindruck davon, wie ich digitale Produkte denke.",
+      title: "Referenzen",
+      text: "Hier kannst du später ein Kundenfeedback, ein Siegel oder ein kurzes Testimonial einsetzen.",
     },
   ];
 
@@ -60,24 +63,26 @@ export default function Home() {
     <main>
       <section className="section" style={{ paddingTop: "64px" }}>
         <div className="container">
-          <div className="hero-panel hero-layout">
-            <div>
-              <h1>Frontend mit Sinn für Klarheit, Struktur und visuelle Qualität.</h1>
-              <p>
-                Ich bin Samuel und interessiere mich für Webentwicklung mit Fokus auf saubere Oberflächen, verständliche
-                Nutzerführung und eine Umsetzung, die technisch wie gestalterisch überzeugt.
-              </p>
-              <div className="hero-actions">
-                <a className="button-primary" href="#arbeiten">Arbeiten ansehen</a>
-                <Link className="button-secondary" href="/about">Mehr über mich</Link>
-              </div>
+          <div className="hero-panel">
+            <small className="hero-kicker">Digital Portfolio</small>
+            <h1>Websites und Frontends, die ruhig wirken und trotzdem im Kopf bleiben.</h1>
+            <p>
+              Ich bin Samuel und entwickle moderne Websites mit klarer Struktur, sauberem Code und einem reduzierten Look.
+              Der Fokus liegt auf Lesbarkeit, Vertrauen und einer präzisen Umsetzung statt auf visuellem Lärm.
+            </p>
+            <div className="hero-actions">
+              <a className="button-primary" href="#projects">Arbeiten ansehen</a>
+              <Link className="button-secondary" href="/contact">Kontakt</Link>
             </div>
+          </div>
 
-            <div className="hero-note">
-              <span className="hero-note-label">Samuel Bieri</span>
-              <h3>Frontend Development</h3>
-              <p>Schwerpunkt auf moderne Websites, verständliche Interfaces und eine ruhige visuelle Sprache.</p>
-            </div>
+          <div className="stat-grid">
+            {stats.map((stat) => (
+              <div key={stat.id} className="stat-card">
+                <p>{stat.label}</p>
+                <h3>{stat.value}</h3>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -85,47 +90,40 @@ export default function Home() {
       <section className="section">
         <div className="container">
           <div className="section-heading">
-            <h2>Das sind meine Stärken</h2>
-            <p>Die Bereiche, auf die ich mich besonders konzentriere und in denen ich Mehrwert bringe.</p>
+            <h2>Was ich anbiete</h2>
+            <p>Von der ersten Idee bis zur fertigen Seite: klar, reduziert und mit einem Stil, der professionell statt beliebig wirkt.</p>
           </div>
 
           <div className="feature-grid">
-            {strengths.map((strength) => (
-              <article key={strength.id} className="card">
-                <h3>{strength.title}</h3>
-                <p>{strength.description}</p>
+            {services.map((service) => (
+              <article key={service.id} className="card">
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="section" id="arbeiten">
+      <section className="section" id="projects">
         <div className="container">
           <div className="section-heading">
             <h2>Ausgewählte Arbeiten</h2>
-            <p>Ein Einblick in Arbeiten und Konzepte, an denen ich bereits gestaltet oder entwickelt habe.</p>
+            <p>Eine Auswahl visueller und technischer Arbeiten mit Fokus auf Nutzererlebnis, Klarheit und einer sauberen Basis.</p>
           </div>
 
           <div className="project-grid">
-            {works.map((work) => (
-              <article key={work.id} className="card project-card">
-                <div className="project-preview">
-                  <span>{work.preview}</span>
-                </div>
+            {projects.map((project) => (
+              <div key={project.id} className="card">
+                {project.status ? <span className="card-badge">{project.status}</span> : null}
                 <div className="project-meta">
-                  {work.stack.map((item) => (
+                  {project.stack.map((item) => (
                     <span key={item} className="pill">{item}</span>
                   ))}
                 </div>
-                <h3>{work.title}</h3>
-                <p>{work.description}</p>
-                <div className="project-links">
-                  <a className="button-text" href={work.source} target="_blank" rel="noreferrer">
-                    Source Code
-                  </a>
-                </div>
-              </article>
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+              </div>
             ))}
           </div>
         </div>
@@ -135,21 +133,30 @@ export default function Home() {
         <div className="container">
           <div className="section-heading">
             <h2>Kurz zu mir</h2>
-            <p>Ein kurzer Einblick in meine Arbeitsweise, Interessen und die Perspektive, die ich in Frontend-Arbeit einbringe.</p>
+            <p>Wenn noch Inhalte fehlen, ist das kein Problem. Wir können Texte, Referenzen oder weitere Details Schritt für Schritt ergänzen.</p>
           </div>
 
           <div className="note-grid">
-            {profileNotes.map((note) => (
+            {notes.map((note) => (
               <article key={note.id} className="card">
                 <h3>{note.title}</h3>
                 <p>{note.text}</p>
               </article>
             ))}
           </div>
+        </div>
+      </section>
 
-          <div className="hero-actions mt-8">
-            <Link className="button-primary" href="/about">Zur Seite Über mich</Link>
-            <Link className="button-secondary" href="/contact">Kontakt</Link>
+      <section className="section">
+        <div className="container">
+          <div className="hero-panel">
+            <small className="hero-kicker">Kontakt</small>
+            <h2>Wenn dir der Stil gefällt, melde dich gerne direkt.</h2>
+            <p>Bei Fragen, Feedback oder Interesse an meiner Arbeit kannst du mir einfach eine kurze Nachricht schicken.</p>
+            <div className="hero-actions">
+              <Link className="button-primary" href="/contact">Kontaktseite</Link>
+              <a className="button-secondary" href="mailto:samuelbieri343@gmail.com">Direkt per Mail</a>
+            </div>
           </div>
         </div>
       </section>
