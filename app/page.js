@@ -115,7 +115,7 @@ export default function Home() {
           <div className="project-grid">
             {projects.map((project) => (
               <div key={project.id} className="card">
-                <span className="card-badge">{project.status}</span>
+                {project.status ? <span className="card-badge">{project.status}</span> : null}
                 <div className="project-meta">
                   {project.stack.map((item) => (
                     <span key={item} className="pill">{item}</span>
@@ -123,15 +123,15 @@ export default function Home() {
                 </div>
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
-                {project.link.startsWith("/") ? (
+                {project.link?.startsWith("/") ? (
                   <Link className="button-text" href={project.link}>
                     {project.cta}
                   </Link>
-                ) : (
+                ) : project.link ? (
                   <a className="button-text" href={project.link}>
                     {project.cta}
                   </a>
-                )}
+                ) : null}
               </div>
             ))}
           </div>
