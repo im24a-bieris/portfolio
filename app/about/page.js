@@ -16,26 +16,58 @@
   },
 ];
 
+const profileNotes = [
+  {
+    id: 1,
+    title: "Mein Fokus",
+    text: "Websites, die ruhig, modern und vertrauenswürdig wirken und auf Mobile genauso sauber funktionieren wie auf Desktop.",
+  },
+  {
+    id: 2,
+    title: "So denke ich",
+    text: "Design und Code gehören für mich zusammen. Eine gute Seite soll nicht nur schön aussehen, sondern sich klar und logisch anfühlen.",
+  },
+  {
+      id: 3,
+      title: "Platzhalter für Story",
+      text: "Hier kannst du später kurz erzählen, wie du zur Webentwicklung gekommen bist oder was dich an Gestaltung reizt.",
+  },
+];
+
 export default function About() {
   return (
     <main>
-      <section className="section">
+      <section className="section" style={{ paddingTop: "64px" }}>
         <div className="container">
-          <div className="about-intro">
-            <h1>Über mich</h1>
+          <div className="about-intro hero-panel">
+            <small className="hero-kicker">Über mich</small>
+            <h1>Ich entwickle klare digitale Auftritte mit Sinn für Struktur.</h1>
             <p>
               Ich bin Samuel, Frontend-Entwickler mit Fokus auf moderne Websites, die schnell laden, klar strukturiert sind
               und auf jedem Gerät sauber funktionieren.
             </p>
             <p>
               Mein Schwerpunkt liegt auf der Verbindung von Design und Technik: gute Nutzerführung, wartbarer Code und
-              ein Ergebnis, das nicht nur gut aussieht, sondern auch messbar performt.
+              ein Ergebnis, das nicht nur gut aussieht, sondern auch langfristig nachvollziehbar bleibt.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="section" style={{ backgroundColor: "var(--white)" }}>
+      <section className="section">
+        <div className="container">
+          <div className="note-grid">
+            {profileNotes.map((note) => (
+              <article key={note.id} className="card">
+                <h3>{note.title}</h3>
+                <p>{note.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
         <div className="container">
           <div className="section-heading">
             <h2>Fähigkeiten</h2>
@@ -61,7 +93,7 @@ export default function About() {
         <div className="container">
           <div className="section-heading">
             <h2>So arbeite ich</h2>
-            <p>Klare Abläufe für planbare Ergebnisse.</p>
+            <p>Klare Abläufe für eine ruhige und nachvollziehbare Arbeitsweise.</p>
           </div>
 
           <div className="project-grid">
@@ -86,5 +118,3 @@ export default function About() {
     </main>
   );
 }
-
-

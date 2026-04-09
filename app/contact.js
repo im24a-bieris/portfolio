@@ -6,7 +6,7 @@
           <div className="contact-info">
             <h1>Kontakt</h1>
             <p className="mt-4">
-              Hast du ein Projekt oder eine Frage? Schreib mir gerne. Ich antworte in der Regel innerhalb von 24 Stunden.
+              Hast du eine Frage? Schreib mir gerne. Ich antworte in der Regel innerhalb von 24 Stunden.
             </p>
 
             <div className="contact-cards mt-8">

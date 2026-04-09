@@ -40,7 +40,7 @@ export default function RootLayout({ children }) {
               <h4>Kontakt</h4>
               <a href="mailto:samuelbieri343@gmail.com">samuelbieri343@gmail.com</a>
               <a href="tel:+41775060634">+41 77 506 06 34</a>
-              <p style={{ marginTop: "8px", fontSize: "14px" }}>Basel, Schweiz</p>
+              <p style={{ marginTop: "8px", fontSize: "14px" }}>Zürich, Schweiz</p>
             </div>
           </div>
           <div className="container footer-bottom">
@@ -51,4 +51,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-
