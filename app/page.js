@@ -34,7 +34,7 @@ export default function Home() {
     },
     {
       id: 2,
-      title: "Turnverei-VideoWebsite",
+      title: "Turnverein-VideoWebsite",
       description: "Eine Website, wo Trainer Turn-Videos mit Beschreibungen und Tipps hochladen können, damit die Turner, ohne Trainer neue Teile zu lernen",
       stack: ["JS", "REST API", "Charting"],
       status: "UI System",
