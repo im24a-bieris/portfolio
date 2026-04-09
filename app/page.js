@@ -2,8 +2,7 @@
 
 export default function Home() {
   const stats = [
-    { id: 1, label: "Umgesetzte Arbeiten", value: "12+" },
-    { id: 2, label: "Jahre Erfahrung", value: "4+" },
+    { id: 2, label: "Jahre Erfahrung", value: "2+" },
     { id: 3, label: "Antwortzeit", value: "< 24h" },
   ];
 
