@@ -28,31 +28,18 @@ export default function Home() {
   const projects = [
     {
       id: 1,
-      title: "Modern Landingpage",
-      description: "Schnelle Marketing-Seite mit klarer Struktur, SEO-Basis und sauberem Responsive-Verhalten.",
-      link: "/contact",
-      cta: "Mehr erfahren",
-      stack: ["Next.js", "CSS", "Vercel"],
-      status: "Live Konzept",
+      title: "SmashAmMeerkat",
+      description: "Ähnlich wie Whac-A-Mole nur das man die richtigen Erdmännchen abschlieest",
+      stack: ["Java", "CSS", "Vercel"],
     },
     {
       id: 2,
-      title: "Business Dashboard",
-      description: "Komponentenbasiertes Dashboard mit Fokus auf Lesbarkeit, Konsistenz und Performance.",
-      link: "/about",
-      cta: "Mein Arbeitsstil",
-      stack: ["React", "REST API", "Charting"],
+      title: "Turnverei-VideoWebsite",
+      description: "Eine Website, wo Trainer Turn-Videos mit Beschreibungen und Tipps hochladen können, damit die Turner, ohne Trainer neue Teile zu lernen",
+      stack: ["JS", "REST API", "Charting"],
       status: "UI System",
     },
-    {
-      id: 3,
-      title: "Portfolio Redesign",
-      description: "Neuaufbau eines bestehenden Portfolios mit besserer Nutzerführung und strukturierter Content-Hierarchie.",
-      link: "mailto:samuelbieri343@gmail.com",
-      cta: "Kontakt aufnehmen",
-      stack: ["UI", "UX", "Responsive"],
-      status: "Persönliche Marke",
-    },
+    
   ];
 
   const notes = [
